@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace Maluhia.Core.Api.Controllers;
+namespace Maluhia.Core.WebApi.Controllers;
 
 [ApiController]
 [Route("[controller]")]

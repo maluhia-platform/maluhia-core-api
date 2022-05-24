@@ -1,4 +1,4 @@
-namespace Maluhia.Core.Api;
+namespace Maluhia.Core;
 
 public class WeatherForecast
 {
