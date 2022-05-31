@@ -22,7 +22,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Tests", "tes
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docker", "docker", "{FD9EB50C-F4BE-4B83-A0B0-F9FE4F583160}"
 	ProjectSection(SolutionItems) = preProject
-		Dockerfile = Dockerfile
+		deploy\Dockerfile = deploy\Dockerfile
 	EndProjectSection
 EndProject
 Global
