@@ -1,6 +1,7 @@
+using Maluhia.Core;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Maluhia.Core.WebApi.Controllers;
+namespace WebAPI.Controllers;
 
 [ApiController]
 [Route("[controller]")]
@@ -21,6 +22,8 @@ public class WeatherForecastController : ControllerBase
     [HttpGet(Name = "GetWeatherForecast")]
     public IEnumerable<WeatherForecast> Get()
     {
+        _logger.Log(LogLevel.Error, "Teste");
+        
         return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),

@@ -1,4 +1,7 @@
+using WebAPI.Configurations;
+
 var builder = WebApplication.CreateBuilder(args);
+builder.UseSerilogConfiguration();
 
 // Add services to the container.
 
