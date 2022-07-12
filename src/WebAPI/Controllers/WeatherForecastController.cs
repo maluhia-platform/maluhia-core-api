@@ -1,3 +1,4 @@
+using CrossCutting.Exceptions;
 using Maluhia.Core;
 using Microsoft.AspNetCore.Mvc;
 
@@ -22,7 +23,8 @@ public class WeatherForecastController : ControllerBase
     [HttpGet(Name = "GetWeatherForecast")]
     public IEnumerable<WeatherForecast> Get()
     {
-        throw new Exception("Teste");
+        throw DomainException.ThrowException(nameof(WeatherForecastController), nameof(WeatherForecastController.Get),
+            "generic error");
         
         _logger.Log(LogLevel.Error, "Teste");
         
