@@ -1,5 +1,4 @@
 using Serilog;
-using Serilog.Exceptions;
 
 namespace WebAPI.Configurations;
 
@@ -9,9 +8,7 @@ public static class SerilogConfiguration
     {
         app.Host.UseSerilog((ctx, conf) =>
         {
-             conf.Enrich.WithMachineName()
-                 .Enrich.WithExceptionDetails()
-                 .Enrich.WithEnvironmentName()
+             conf.ReadFrom.Configuration(ctx.Configuration)
                  .WriteTo.Async(wt => wt.Console());
         });
         return app;
